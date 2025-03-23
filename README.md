@@ -13,6 +13,8 @@ Certified Argo Project Associate Study
 
 ## Domains & Competencies
 
+see - https://github.com/cncf/curriculum/blob/master/CAPA_Curriculum.pdf
+
 ### Argo Workflows (36%)
 - Understand Argo Workflow Fundamentals
 - Generating and Consuming Artifacts
@@ -39,3 +41,4 @@ Certified Argo Project Associate Study
 
 ## References
 - https://argoproj.github.io/
+- https://argo-cd.readthedocs.io/en/stable/
