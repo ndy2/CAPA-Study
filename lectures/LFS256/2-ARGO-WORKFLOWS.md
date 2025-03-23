@@ -1,5 +1,7 @@
 # Argo Workflows
 
+ref - https://argo-workflows.readthedocs.io/en/latest/
+
 ## Argo Workflows Core Concept 
 
 ### Workflow
@@ -170,3 +172,15 @@ spec:
 ### WorkflowTemplate
 
 WorkflowTemplate 은 재사용 가능한 worflow template 을 정의하는 resource 이다. workflow logic, parameters, metadata 등을 캡슐화 할 수 있다.
+
+## Argo Workflows Architecture
+
+Argo Workflow 는 k8s 를 위한 workflow orchestration platform 이다. k8s 를 통해 실행 환경에서 복잡한 workflow 를 정의/실행하고 관리한다.
+
+![img.png](images/workflows.png)
+
+각 `Step` 과 `DAG` 는 세가지 containers 를 가지는 pod 를 생성한다.
+
+- init
+- main
+- wait

@@ -1,5 +1,7 @@
 # Argo CD
 
+ref - https://argo-cd.readthedocs.io/en/latest/
+
 ## Key Advancements
 
 - GitOps
