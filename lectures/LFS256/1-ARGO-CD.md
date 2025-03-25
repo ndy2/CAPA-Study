@@ -45,7 +45,7 @@ Reconciliation Loop : Observe -> Compare -> Reconcile & Sync
 **주요 특징**
 
 - Drift Detection
-- GitOps 원칙 준수 - Single source of Truth
+- [GitOps 원칙](../../notes/GITOPS-PRINCIPLES.md) 준수 - Single source of Truth
 
 ## Argo CD Synchronization Principles
 
