@@ -12,3 +12,9 @@
     - 선언된 설정(configuration)을 실제 환경에 반영하는 역할
 - Closed loop
     - 실제 상태 (actual state) 와 원하는 상태 (desired state) 를 계속 비교하며 지속적으로 피드백을 제공
+
+으로 `LFS256` 강의와 `예제로 배우는 ArgoCD` 책에서는 소개하지만 
+
+https://opengitops.dev/ 에 따르면 `Oct 9, 2021` 에 발표된 `v1.0.0` 에서는 principles 가 다음의 4가지로 정리된 것으로 보인다.
+
+![img.png](images/gitops-principles.png)
