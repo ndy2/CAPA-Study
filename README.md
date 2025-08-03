@@ -23,7 +23,7 @@ see - https://github.com/cncf/curriculum/blob/master/CAPA_Curriculum.pdf
 - Work with DAG (Directed-Acyclic Graphs)
 - Run Data Processing Jobs with Argo Workflows
 
-### ARGO CD (34%)
+### Argo CD (34%)
 - Understand Argo CD Fundamentals
 - Synchronize Applications Using Argo CD
 - Use Argo CD Application
