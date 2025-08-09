@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: dag-template-example-
+spec:
+  entrypoint: dag-example
+  templates:
+  - name: dag-example
+    dag:
+      tasks:
+      - name: task-a
+        template: whalesay
+        arguments:
+          parameters:
+          - name: task-name
+            value: task-a
+      - name: task-b
+        template: whalesay
+        dependencies: [task-a]
+        arguments:
+          parameters:
+          - name: task-name
+            value: task-b
+      - name: task-c
+        template: whalesay
+        dependencies: [task-a]
+        arguments:
+          parameters:
+          - name: task-name
+            value: task-c
+  - name: whalesay
+    inputs:
+      parameters:
+      - name: task-name
+    container:
+      image: docker/whalesay:latest
+      command: [cowsay]
+      args: ["Hello from {{inputs.parameters.task-name}}!"]
