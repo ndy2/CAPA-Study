@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: resource-template-example-
+spec:
+  entrypoint: create-pod
+  templates:
+  - name: create-pod
+    resource:
+      action: create
+      manifest: |
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: nginx-pod
+        spec:
+          containers:
+          - name: nginx
+            image: nginx

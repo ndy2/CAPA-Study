@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: dag-template-example-
+spec:
+  entrypoint: dag-example
+  templates:
+  - name: dag-example
+    dag:
+      tasks:
+      - name: task-a
+        template: whalesay
+      - name: task-b
+        template: whalesay
+        dependencies: [task-a]
+      - name: task-c
+        template: whalesay
+        dependencies: [task-a]
+  - name: whalesay
+    container:
+      image: docker/whalesay:latest
+      command: [cowsay]
+      args: ["Hello from DAG Template!"]

@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: script-template-example-
+spec:
+  entrypoint: print-message
+  templates:
+  - name: print-message
+    script:
+      image: python:3.8
+      command: [python]
+      source: |
+        print("Hello from Script Template!")
